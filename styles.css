@@ -107,3 +107,53 @@ article h2 a {
 article h2 a:hover {
     text-decoration: underline;
 }
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+/* 📌 Tablets (menos de 1024px) */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+    }
+    .separator {
+        left: 250px;
+    }
+    .posts-container {
+        margin-left: 260px;
+    }
+    article {
+        width: calc(50% - 10px); /* Mantiene dos posts por fila */
+    }
+}
+
+/* 📌 Móviles (menos de 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+    }
+
+    .separator {
+        display: none; /* Ocultar separador */
+    }
+
+    .posts-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    article {
+        width: 100%; /* Un post por fila */
+    }
+}
