@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título del Post - Blog de Ciberseguridad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="postscss.css"> <!-- Archivo separado -->
+</head>
+<body>
+
+    <!-- Sidebar con perfil -->
+    <aside class="sidebar">
+        <img src="../images/perfil.jpg" alt="Foto de perfil" class="perfil-foto">
+        <h2 id="nombre">Cargando...</h2>
+
+        <section class="certificaciones">
+            <h3>Certificaciones</h3>
+            <ul id="certificaciones">
+                <li>Cargando...</li>
+            </ul>
+        </section>
+
+        <section class="sobre-mi">
+            <h3>Sobre mí</h3>
+            <p id="sobre-mi">Cargando...</p>
+        </section>
+
+        <section class="redes">
+            <h3>Redes Sociales</h3>
+            <div id="redes">
+                <p>Cargando...</p>
+            </div>
+        </section>
+    </aside>
+
+    <!-- Separador -->
+    <div class="separator"></div>
+
+    <!-- Contenedor del post -->
+    <main class="post-container">
+        <button class="back-button" onclick="window.history.back();">⬅ Volver al inicio</button>
+
+        <article class="post">
+            <h1>Presentación de mi página web</h1>
+            <p class="post-meta">Publicado el <span>31 de enero de 2025</span></p>
+            <p>Bienvenidos a mi página web, en la que encontraréis información sobre ciberseguridad como:</p>
+            <ul>
+                <li>Pentesting web</li>
+                <li>Certificaciones de pentesting</li>
+                <li>Writeups de plataformas como Hack The Box, TryHackMe, etc.</li>
+                <li>Noticias sobre el mundo de la ciberseguridad</li>
+                <li>Personalización de Linux</li>
+                <li>Scripting en Bash</li>
+            </ul>
+        </article>
+    </main>
+
+    <!-- JavaScript para cargar la información del perfil -->
+    <script src="../script.js"></script>
+
+</body>
+</html>
