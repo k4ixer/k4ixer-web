@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Ciberseguridad</title>
+    <title>Blog de Ciberseguridad</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="postscss.css"> 
 </head>
 <body>
-    <!-- Sidebar con perfil -->
+
     <aside class="sidebar">
-        <img src="/images/perfil.jpg" alt="Foto de perfil" class="perfil-foto">
+        <img src="../images/perfil.jpg" alt="Foto de perfil" class="perfil-foto">
         <h2 id="nombre">Cargando...</h2>
 
         <section class="certificaciones">
             <h3>Certificaciones</h3>
-            <ul id="certificaciones">
-                <li>Cargando...</li>
-            </ul>
+            <ul id="certificaciones"><li>Cargando...</li></ul>
         </section>
 
         <section class="sobre-mi">
@@ -27,21 +24,19 @@
 
         <section class="redes">
             <h3>Redes Sociales</h3>
-            <div id="redes">
-                <p>Cargando...</p>
-            </div>
+            <div id="redes"><p>Cargando...</p></div>
         </section>
     </aside>
 
-    <!-- Separador -->
     <div class="separator"></div>
 
-    <!-- Contenedor de Posts -->
     <main class="posts-container" id="posts-container">
-        <!-- Los posts se cargarán aquí mediante JavaScript -->
+        <p>Cargando posts...</p>
     </main>
 
-    <!-- JavaScript para cargar la información del perfil y los posts -->
+    <!-- IMPORTAR LOS ARCHIVOS JS EN ESTE ORDEN -->
+    <script src="perfil.js"></script>
+    <script src="posts.js"></script>
     <script src="script.js"></script>
 
 </body>
