@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 tipoClase = "post-video";
                 tipoTexto = "🟥 Video";
                 separatorClase = "separator-video"; // Asignamos la clase para el separador rojo
+            } else if (post.tipo === "post") {  // Nuevo tipo de post (morado)
+                tipoClase = "post-morado";
+                tipoTexto = "🟦 Post";
+                separatorClase = "separator-morado"; // Asignamos la clase para el separador morado
             }
 
             // Agregamos el post al HTML
@@ -59,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Cambiamos el color del separador al color correspondiente según el tipo de post
         const separator = document.querySelector('.separator');
-        separator.classList.remove('separator-writeup', 'separator-anuncio', 'separator-video'); // Eliminamos clases previas
+        separator.classList.remove('separator-writeup', 'separator-anuncio', 'separator-video', 'separator-morado'); // Eliminamos clases previas
         separator.classList.add(separatorClase); // Añadimos la clase correspondiente
     }
 });

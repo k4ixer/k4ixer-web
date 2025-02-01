@@ -262,22 +262,6 @@ article h2 a:hover {
     }
 }
 
-/* ------------------------------
-   Estilos de cada tipo de post
------------------------------- */
-
-.post-writeup {
-    border-left: 4px solid #28a745; /* Verde */
-}
-
-.post-anuncio {
-    border-left: 4px solid #ff9800; /* Naranja */
-}
-
-.post-video {
-    border-left: 4px solid #dc3545; /* Rojo */
-}
-
 /* Rectángulo de tipo de post */
 .post-tipo {
     display: inline-block;
@@ -287,24 +271,8 @@ article h2 a:hover {
     border-radius: 4px;
     text-align: center;
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     align-self: flex-start; /* Alinea a la izquierda, si prefieres al centro usa 'center' */
-}
-
-/* Colores de fondo para cada tipo */
-.post-writeup .post-tipo {
-    background-color: rgba(40, 167, 69, 0.2); /* Verde suave */
-    color: #28a745;
-}
-
-.post-anuncio .post-tipo {
-    background-color: rgba(255, 152, 0, 0.2); /* Naranja suave */
-    color: #ff9800;
-}
-
-.post-video .post-tipo {
-    background-color: rgba(220, 53, 69, 0.2); /* Rojo suave */
-    color: #dc3545;
 }
