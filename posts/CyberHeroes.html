@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K4ixer Blog</title>
+    <link rel="icon" type="image/x-icon" href="../images/perfil.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="postscss.css"> <!-- Archivo separado -->
+    <link rel="stylesheet" href="../poststyleicon.css">
+</head>
+<body>
+
+    <!-- Sidebar con perfil -->
+    <aside class="sidebar">
+        <img src="../images/perfil.jpg" alt="Foto de perfil" class="perfil-foto">
+        <h2 id="nombre">Cargando...</h2>
+
+        <section class="certificaciones">
+            <h3>Certificaciones</h3>
+            <ul id="certificaciones">
+                <li>Cargando...</li>
+            </ul>
+        </section>
+
+        <section class="sobre-mi">
+            <h3>Sobre mí</h3>
+            <p id="sobre-mi">Cargando...</p>
+        </section>
+
+        <section class="redes">
+            <h3>Redes Sociales</h3>
+            <div id="redes">
+                <p>Cargando...</p>
+            </div>
+        </section>
+    </aside>
+
+    <!-- Separador -->
+    <div class="separator"></div>
+
+    <!-- Contenedor del post -->
+    <main class="post-container">
+        <button class="back-button" onclick="window.location.href='../index.html';">⬅ Volver al inicio</button>
+
+        <article class="post post-writeup"> <!-- 🟧 Anuncio / 🟥 Video / 🟩 Writeup / 🟦 Morado = Post -->
+            <h1>CyberHeroes Writeup</h1>
+            <p class="post-meta">Publicado el <span>1 de febrero de 2025</span></p>
+            <div class="post-tipo">🟩 Writeup</div> 
+            <h2>Introducción</h2>
+            <p>Hoy les traigo una máquina de TryHackMe muy fácil, recomendada para quienes están comenzando en ciberseguridad, llamada "Cyberheroes".</p>
+            <p>En este post abordaremos los siguientes conceptos: </p>
+            <ul>
+                <li>Information Leakage</li>
+            </ul>
+            <img src="../images/postsimg/CyberHeroes/iconroom.png" alt="Imagen del post" class="post-image">
+            <h2>Intrusión</h2>
+            <p>Comenzamos con un escaneo utilizando Nmap:</p>
+            <img src="../images/postsimg/CyberHeroes/nmap1.PNG" alt="Imagen del post" class="post-image">
+            <p>Observamos que el puerto 80 está abierto, y en él se está ejecutando una página web con un formulario de login: </p>
+            <img src="../images/postsimg/CyberHeroes/Capturaloginweb.PNG" alt="Imagen del post" class="post-image">
+            <p>Al revisar el código fuente de la página, encontramos un script en JavaScript que utiliza una condición para procesar el login: </p>
+            <ul>
+                <li>Si el campo de "username" es igual a "h3ck3rBoi" y el campo de "password" es igual a "54321@terceSrepuS" (pero en reversa), el login será exitoso.</li>
+            </ul>
+            <p>Si cumplimos con esta condición, el login se completa con éxito.</p>
+            <img src="../images/postsimg/CyberHeroes/scriptcodigofuente.PNG" alt="Imagen del post" class="post-image">
+            <p>Cambiamos el orden de los caracteres en el campo de "password" para descubrir la contraseña.</p>
+            <img src="../images/postsimg/CyberHeroes/contraseña.PNG" alt="Imagen del post" class="post-image">
+            <p>Ahora tenemos las credenciales necesarias para acceder al sitio web, donde podemos ver la flag.</p>
+            <img src="../images/postsimg/CyberHeroes/final.PNG" alt="Imagen del post" class="post-image">
+            <h2>Conclusión</h2>
+            <p>Como pueden ver, esta es una máquina muy sencilla de resolver. Para quienes están comenzando en ciberseguridad, recomiendo mucho intentar resolverla.</p>
+        </article>
+    </main>
+
+    <!-- IMPORTAR LOS ARCHIVOS JS EN ESTE ORDEN -->
+    <script src="../perfil.js"></script>
+    <script src="../posts.js"></script>
+    <script src="../script.js"></script>
+
+</body>
+</html>

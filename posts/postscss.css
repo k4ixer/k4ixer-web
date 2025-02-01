@@ -159,7 +159,7 @@ article h2 a:hover {
 
 /* Imagen destacada */
 .post-image {
-    width: 100%;
+    width: 40%;
     border-radius: 5px;
     margin: 15px 0;
 }
@@ -276,3 +276,13 @@ article h2 a:hover {
     margin-right: auto;
     align-self: flex-start; /* Alinea a la izquierda, si prefieres al centro usa 'center' */
 }
+
+/* Espacio entre párrafos */
+p {
+    margin-bottom: 5px; /* Ajusta el valor según lo que desees */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
