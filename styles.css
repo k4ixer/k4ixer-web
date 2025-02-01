@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #121212;
+    color: #888585;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar (Perfil) */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.perfil-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #3a3a3a;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    color: #888888;
+}
+
+.certificaciones, .sobre-mi, .redes {
+    margin-top: 20px;
+    text-align: left;
+}
+
+h3 {
+    color: #888888;
+    border-bottom: 1px solid #888888; /* MODIFICAR CON 3A3A3A3A3A en caso de no gustar */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Redes sociales */
+.redes a {
+    display: block;
+    color: #888888;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.redes a:hover {
+    text-decoration: underline;
+}
+
+/* Separador entre sidebar y posts */
+.separator {
+    width: 4px; /* Más delgada */
+    background-color: #252525; /* Gris oscuro */
+    height: 100vh;
+    position: fixed;
+    left: 300px;
+}
+
+/* Contenedor de Posts */
+.posts-container {
+    margin-left: 310px;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo de cada post */
+article {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #3a3a3a;
+    width: calc(50% - 10px); /* Dos posts por fila */
+}
+
+/* Títulos de posts como enlaces */
+article h2 a {
+    color: #888888;
+    text-decoration: none;
+}
+
+article h2 a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+/* 📌 Tablets (menos de 1024px) */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+    }
+    .separator {
+        left: 250px;
+    }
+    .posts-container {
+        margin-left: 260px;
+    }
+    article {
+        width: calc(50% - 10px); /* Mantiene dos posts por fila */
+    }
+}
+
+/* 📌 Móviles (menos de 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+    }
+
+    .separator {
+        display: none; /* Ocultar separador */
+    }
+
+    .posts-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    article {
+        width: 100%; /* Un post por fila */
+    }
+}
+
+
+
